@@ -1,0 +1,125 @@
+<% day_shedule, ch_shedule, zn_shedule = show_lesson_details(shedule_details, day_week, lesson_no)%> 
+<% if day_shedule !=nil %>
+  <table id="full">
+    <tr>
+      <%if day_shedule.subgroup_no ==0%>
+        <td colspan="2">
+          <div>
+            <%=day_shedule.lesson_title%> <br/>
+            <%=day_shedule.place%><br/>
+            <%=day_shedule.course%>
+          </div>
+          <%if !widget%>
+            <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
+            
+          <%end%>
+        </td>
+      <%else%> 
+        <td>
+          <%if day_shedule.subgroup_no ==1%>
+            <div><%=day_shedule.lesson_title%> <br/>
+              <%=day_shedule.place%><br/>
+              <%=day_shedule.course%></div>
+            <%if !widget%>
+              <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
+            <%end%>
+          <%end%>
+        </td>
+        <td>
+          <%if day_shedule.subgroup_no ==2%>
+            <div><%=day_shedule.lesson_title%> <br/>
+              <%=day_shedule.place%><br/>
+              <%=day_shedule.course%></div>
+            <%if !widget%>
+              <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
+            <%end%>
+          <%end%>
+        </td>
+      <%end%>
+  
+    </tr>
+  </table>
+<%end%>
+
+
+<%if ch_shedule != nil || zn_shedule != nil%>
+  <table id="parts">
+    <tr> 
+      <% if ch_shedule != nil %>
+        <%if ch_shedule.subgroup_no ==0%>
+          <td colspan="2">
+            <div ><%=ch_shedule.lesson_title%></div>
+            <%if !widget%>
+              <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
+            <%end%>
+            <hr></hr>
+          </td>
+        <%else%>
+          <td>
+            <%if ch_shedule.subgroup_no == 1%>
+              <div><%=ch_shedule.lesson_title%></div>
+              <%if !widget%>
+                <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
+              <%end%>
+            <%end%>
+          </td> 
+          <td>
+            <%if ch_shedule.subgroup_no == 2%>
+              <div><%=ch_shedule.lesson_title%></div>
+              <%if !widget%>
+                <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
+              <%end%>
+            <%end%>
+          </td>
+        <%end%>
+      <%else%>
+        <%if !widget%>
+          <td> <%=link_to "Add", new_shedule_shedule_detail_path(shedule, {"day"=>day_week, "lesson"=>lesson_no, "teacher_id"=>teacher_id}) %>
+          </td>
+        <%end%>
+      <%end%>
+    </tr>
+  
+    <tr>
+      <% if zn_shedule != nil %>
+        <%if zn_shedule.subgroup_no ==0%>
+          <td>
+            <div><%=zn_shedule.lesson_title%></div>
+            <%if !widget%>
+              <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
+            <%end%>
+          </td>
+        <%else%>
+          <td>
+            <%if zn_shedule.subgroup_no == 1%>
+              <div><%=zn_shedule.lesson_title%></div>
+              <%if !widget%>
+                <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
+              <%end%>
+            <%end%>
+          </td> 
+          <td>
+            <%if zn_shedule.subgroup_no == 2%>
+              <div><%=zn_shedule.lesson_title%></div>
+              <%if !widget%>
+                <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
+              <%end%>
+            <%end%>
+          </td>
+        <%end%>  
+      <%else%>   
+        <%if !widget%>
+          <td> 
+            <%=link_to "Add", new_shedule_shedule_detail_path(shedule, {"day"=>day_week, "lesson"=>lesson_no, "teacher_id"=>teacher_id}) %>
+      
+          </td>
+        <%end%>
+      <%end%>
+    </tr>
+  </table>
+<%end%>
+<%if !widget%>
+  <%if day_shedule == nil && ch_shedule == nil && zn_shedule == nil%>  
+    <%=link_to "Add", new_shedule_shedule_detail_path(shedule, {"day"=>day_week, "lesson"=>lesson_no, "teacher_id"=>teacher_id}) %>
+  <%end%>
+<%end%>

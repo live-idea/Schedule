@@ -41,7 +41,7 @@ module Schedule
 
     # Enable the asset pipeline
     config.assets.enabled = true
-
+    config.assets.paths << "C:/Ruby192/lib/ruby/gems/1.9.1/gems/jquery-rails-1.0.14/vendor/assets/javascripts"
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end

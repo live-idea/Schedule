@@ -1,0 +1,47 @@
+<%= simple_form_for [@shedule, @shedule_detail] do |f| %>
+ <%  @days = [["Понеділок", 1],["Вівторок", 2], ["Середа", 3], ["Четвер", 4], ["П'ятниця", 5], ["Субота", 6]]%>
+ <%  @lessons = [1,2,3,4,5,6] %>
+ <%  @weekType = [["вся", 0], ["чисельник", 1], ["знаменник", 2]] %>
+ <%  @subgroup = [ ["вся", 0], ["перша", 1], ["друга", 2]] %>
+ <%  @lessonType = ["лекція", "практична", "лабораторна"] %>
+
+<div class="field">
+    <%= f.label :day_week %>
+    <%= f.select :day_week, @days %><br/>
+  </div>
+<br/>
+  
+<div class="field">
+    <%= f.label :lesson_no %>
+    <%= f.select :lesson_no, @lessons %><br/>
+</div>
+<br/>
+<div class="field">
+    <%= f.label :week_type %>
+    <%= f.select :week_type, @weekType %><br/>
+</div>
+<br/>
+<div class="field">
+    <%= f.label :teacher_id %>
+    <%= f.select :teacher_id, Teacher.all.map {|t| [t.full_name, t.id]}, :prompt=>"--Виберіть викладача--" %>
+</div>
+<div class="field">
+    <%= f.hidden_field :teacher_id %>
+</div>
+<br/>
+ <%= f.input :lesson_title%>
+  <%= f.input :place %>
+  <%= f.input :course %>
+ 
+
+<div class="field">
+    <%= f.label :lesson_type %>
+    <%= f.select :lesson_type, @lessonType %><br/>
+</div>
+<br/>
+<div class="field">
+    <%= f.label :subgroup_no %>
+    <%= f.select :subgroup_no, @subgroup %><br/>
+</div>
+  <%= f.button :submit %>
+<% end %>

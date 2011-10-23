@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag    "application" %>
+<% @days = [["Понеділок", 1],["Вівторок", 2], ["Середа", 3], ["Четвер", 4], ["П'ятниця", 5], ["Субота", 6]]%>
+<% @days = params[:day] ? [@days[params[:day].to_i]] : @days %>
+<%  @lessons = [1,2,3,4,5,6] %>
+<table id="one-column-emphasis" summary="2007 Major IT Companies' Profit">
+  <colgroup>
+    <col class="oce-first" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col">/</th>
+      <% @days.each do |day| %>
+        <th scope="col"><%=day[0]%></th>
+      <%end%>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lessons.each do |lesson| %>
+    <tr>
+      <td><%=lesson%></td>
+      <% @days.each do |day| %>
+        <td >
+          <%= render :partial => "lesson_details", :locals => {:shedule=>@shedule, :shedule_details => @shedule_details, :day_week=>day[1], :lesson_no=>lesson, :teacher_id=>@teacher_id, :widget => true} %>
+             
+        </td>
+      <%end%>
+    </tr>
+   
+    <%end%> 
+  </tbody>
+
+</table>

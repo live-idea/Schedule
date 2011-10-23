@@ -1,0 +1,30 @@
+<%= simple_form_for @shedule do |f| %>
+  <%= f.input :semester %>
+<script>
+	$(function() {
+		$( "#datepicker" ).datepicker( { showAnim: 'fadeIn' });
+		
+	});
+	
+        $(function() {
+		$( "#datepicker2" ).datepicker( { showAnim: 'fadeIn' });
+		
+	});
+</script>
+
+<div class="demo">
+
+<p>Start Date: <input type="text" id="datepicker"></p>
+
+</div> <!--End demo -->
+ 
+<div class="demo">
+
+<p>End Date: <input type="text" id="datepicker2"></p>
+
+</div><!-- End demo -->
+
+<%= f.button :submit %>
+<% end %>
+
+ 

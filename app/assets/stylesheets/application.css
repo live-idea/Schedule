@@ -5,3 +5,312 @@
  *= require_self
  *= require_tree . 
 */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border:0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+/*body {
+	font: 11px/165% 'Lucida Grande', Verdana, Helvetica, sans-serif;
+	color: #666666; 	
+	margin: 0; padding: 0 0 50px 0; 
+	background: #F6F5F5 url(../images/bg.gif) repeat-x; 
+	text-align: center;
+}*/
+ol, ul {
+	list-style: none;
+}
+/* ------------------------------------------
+   LAYOUT
+------------------------------------------- */ 
+#content-outer {
+	background: #ffffff;
+	width: 100%;
+	padding: 5px 0;		
+	border-bottom: 1px solid #E8E8E8;	
+	text-align: left;
+        overflow: hidden;
+}
+#content-wrapper {
+	margin: 0 auto;	
+	/*background: #fff url(content-bg.gif) repeat-y center top;	*/
+	padding-bottom: 35px;
+	padding-top: 5px;		
+	overflow: auto;
+}
+#header-wrap {
+	width: 100%;
+	background: #fff url(bg.gif) repeat-x ;	
+	margin: 0; padding: 0; 
+}
+#header {
+	position: relative;
+	margin: 0 auto;
+	background: url(border.gif) repeat-x left bottom; 	
+	height: 275px;	
+}
+#header h1#logo-text { margin: 0; padding: 0; }
+#header h1#logo-text a {
+	position: absolute; 
+	margin: 0; padding: 0 5px 0 0;
+	font: normal 75px Georgia, 'Times New Roman', Times, serif;
+	letter-spacing: -6px;
+	color: #93b876;
+	text-decoration: none;
+		
+	/* change the values of top and left to adjust the position of the logo*/
+	top: 90px; left: 20px;	
+}
+#header h1#logo-text a:hover { border: none; }
+#header p#intro {
+	position: absolute;
+	margin: 0; padding: 0;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 1.6em;
+	font-style: italic;
+	letter-spacing: -.5px;
+	color: #7ba45b;
+	width: 400px;
+	
+	/* change the values of top and left to adjust the position */
+	top: 175px; left: 110px;		
+}
+#header #header-image {
+	position: absolute;
+	background: url(header-image.gif) no-repeat;
+	width: 371px;
+	height: 263px;	
+	right: 10px; top: 0;	
+}
+
+/* header quick search */
+#header form#quick-search {
+	position: absolute;
+	top: 10px; right: 0;
+	padding: 0; margin: 0;
+	border: none;
+	width: 270px; height: 33px;
+	background: #F5F4F3 url(header-search.gif) no-repeat;	
+	z-index: 999999;
+}
+
+
+
+/*  navigation  */
+#header #nav {
+	position: absolute;
+	margin: 0; padding: 0;		
+	width: 880px;	
+	left: 0;	top: 5px;		
+}
+#header #nav ul {
+	float: left;	
+	list-style: none;	
+	margin: 5px 0 0 0;
+	height: 45px;
+	padding: 0 0 0 15px;					
+}
+#header #nav ul li {
+	float: left;
+	margin: 0; padding: 0 0 0 10px;		
+}
+#header #nav ul li a {
+	float: left;
+	margin: 0;
+	padding: 0 15px 0 5px;
+	color: #666666;
+	font: bold 14px/40px 'Trebuchet MS', 'Helvetica Neue', Arial, Sans-Serif;
+	text-transform: uppercase;	
+}
+#header #nav ul li a:hover, 
+#header #nav ul li a:active {
+	border: none;
+	color: #111;
+	background: transparent;
+}
+#header #nav ul li#current {
+	background: transparent url(left-tab.gif) no-repeat;	
+}
+#header #nav ul li#current a {	
+	color: #444;
+	background: transparent url(right-tab.gif) no-repeat right top;	
+}
+
+
+
+/* main column */
+.post-info {
+font-size: .95em;
+padding-top: 3px;
+color: #B0B0B0;
+}
+p, dl {
+padding: 10px 15px;
+}
+#main h2 {
+	font: normal 3.7em Georgia, 'Times New Roman', Times, Serif;
+	color: #444;
+	letter-spacing: -2.2px;	
+	margin-left: 5px;	
+	margin-right: 15px;
+	padding-left: 5px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #ebebeb;	
+}
+#main h2 a {
+	color: #444;
+	border: none;
+}
+/* left columns */
+#left-columns h3 {
+	color: #444;
+	font: normal 2em Georgia, 'Times New Roman', Times, Serif;
+	letter-spacing: -0.5px;
+	padding: 5px 10px;
+	margin: 12px 0 5px 0;
+}
+
+/* sidebar menu */
+.sidemenu ul {
+	text-align: left;
+	margin: 10px 8px 8px 8px; padding: 0;
+	border-top: 2px solid #ebebeb; 
+}
+.sidemenu ul li {
+	list-style: none;
+	background: url(../images/dots.gif) repeat-x left bottom; 
+	padding: 7px 5px;
+	margin: 0;		
+}
+* html body .sidemenu ul li {
+	height: 1%;
+}
+.sidemenu ul li a:link,
+.sidemenu ul li a:visited {
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	background-image: none;	
+	background-color: transparent;
+	border: none;
+	color: #7BA857;
+	padding-left: 0;	
+}
+.sidemenu ul li a span {
+	color: #9F9F9F;	
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-style: normal;
+	font-size: 1em;
+}
+.sidemenu ul li a:hover { color: #000;	}
+.sidemenu ul ul { margin: 0 0 0 5px; padding: 0; }
+.sidemenu ul ul li { background: none; }
+
+/* featured-post */
+.featured-post {
+	padding-bottom: 15px;			
+}
+.featured-post h4 {
+	padding: 0;
+	margin: 0 15px 0 12px;
+	border-bottom: 1px solid #ebebeb;
+}
+.featured-post h4 a, 
+.featured-post h4 a:visited {
+	color: #7BA857;
+	border: none;
+}
+.featured-post .post-info {
+	margin-left: 0;
+	padding-bottom: 5px;
+}
+.featured-post p {
+	padding-top: 0;
+}
+/*
+	960 Grid System ~ Core CSS.
+	Learn more ~ http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+
+.container_12,
+.container_16
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16
+{
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+.container_12 .grid_6, .container_16 .grid_8 {
+width: 460px;
+}
+#menu{
+    
+    float: right;
+    width: 18%;
+}
+#menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+#menu ul li b{
+    color: #444444;
+    font-family: Georgia,'Times New Roman',Times,Serif;
+    font-size: 11px;
+}
+#menu ul li a{
+    font-family: Georgia,'Times New Roman',Times,Serif;
+    color: #7BA857;
+    font-size: 11px;
+    text-decoration: none;
+}

@@ -1,0 +1,67 @@
+// Place all the styles related to the shedule_details controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body
+{
+    line-height: 1.6em;
+}
+
+#one-column-emphasis{
+    float: left;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    margin: 0px 0px 0px 0px;
+    width: 80%;
+    border: 1px solid #fff;
+    text-align: left;
+    border-collapse: collapse;
+}
+#one-column-emphasis th
+{
+    font-size: 14px;
+    font-weight: normal;
+    padding: 12px 15px;
+    color: #039;
+    background: #d0dafd;
+}
+#one-column-emphasis td
+{
+    padding: 10px 15px;
+    color: #669;
+    border: 1px solid #e8edff;
+    width: 200px;
+}
+#one-column-emphasis td  div
+{
+    /*border-left-color: #039; 
+    border-left-width: 7px;  
+    padding-left: 5px;
+    border-style: outset;*/
+}
+#parts{
+    border: 1px solid ;
+}
+
+#one-column-emphasis td td, tr
+{
+    border: 1px solid red;
+}
+.oce-first
+{
+    background: #d0dafd;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+#one-column-emphasis tr:hover td
+{
+    color: #339;
+    //background: #eff2ff;
+    //border: 1px solid #e8edff;
+}
+#one-column-emphasis td:hover
+{
+    color: #339;
+    background: #eff2ff;
+    border: 1px solid #e8edff;
+}

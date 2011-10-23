@@ -1,0 +1,26 @@
+<% @shedules.each do |shedule| %>
+<table>
+  <tr> 
+    <td>
+      <%= shedule.semester %>
+     
+    </td>
+    <td><%= shedule.start_date  %></td>
+    <td><%= shedule.end_date %></td>
+   
+</tr>
+
+<tr colspan="3">
+  <td>
+    <%= link_to 'Edit', edit_shedule_path(shedule) %>
+    <%= link_to 'Destroy', shedule_path(shedule), confirm: 'Are you sure?', method: :delete %>  
+  </td>
+</tr>
+</table>
+<%= link_to('Shedule Details', shedule_shedule_details_path(shedule))  %>
+<%end%>
+
+
+<br/>
+<%= link_to 'New', new_shedule_path %>
+

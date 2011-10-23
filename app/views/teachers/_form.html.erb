@@ -1,0 +1,6 @@
+<%= simple_form_for @teacher do |f| %>
+  <%= f.input :full_name %>
+  <%= f.input :department %>
+  <%= f.file_field :photo %>
+  <%= f.button :submit %>
+<% end %>

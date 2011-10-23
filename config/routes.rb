@@ -1,4 +1,16 @@
 Schedule::Application.routes.draw do
+  devise_for :users
+
+  resources :teachers
+  resources :shedules do
+    resources :shedule_details do
+      collection do
+        get :widget
+      end
+    end
+  end
+  root :to => "home#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
