@@ -19,6 +19,7 @@ class TeachersController < ApplicationController
       @teacher = Teacher.find(params[:id])
 
       if @teacher.update_attributes(params[:teacher])
+        
         redirect_to teachers_path, notice: 'Teacher was successfully updated.' 
       else
         render action: "edit" 

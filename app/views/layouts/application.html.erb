@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Schedule</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= stylesheet_link_tag "jquery/ui-smoothness/jquery-ui-1.8.16.custom" %> 
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<!--<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>-->
+  <head>
+    <title>Schedule</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "jquery/ui-smoothness/jquery-ui-1.8.16.custom" %> 
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <!--<p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>-->
 
-<!-- header starts-->
-	<div id="header-wrap"><div id="header" class="container_16">						
-		
-		<h1 id="logo-text"><a href="index.html" title="">Your Shedule</a></h1>
-		<p id="intro">be always up-to-date...</p>
-		
-		<!-- navigation -->
-		<div  id="nav">
-			<ul>
-				<li id="current"><a href="index.html">Semester List</a></li>
-				<li><a href="style.html">Teachers</a></li>
-				<li><a href="blog.html">Shedule</a></li>
-				<li><a href="index.html">Services</a></li>
-				<li><a href="index.html">Support</a></li>
-				<li><a href="index.html">About</a></li>		
-			</ul>		
-		</div>		
-		
-		<div id="header-image"></div> 		
-		
-		
-	<!-- header ends here -->
-	</div>
-          
-        
-        </div>
+    <!-- header starts-->
+    <div id="header-wrap"><div id="header" class="container_16">						
+
+        <h1 id="logo-text"><a href="index.html" title="">Your Shedule</a></h1>
+        <p id="intro">be always up-to-date...</p>
+
+        <!-- navigation -->
+        <div  id="nav">
+          <ul>
+            <% if user_signed_in? %>
+              <li>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to('Login', new_user_session_path)  %>  
+              </li>
+            <% end %>
+            <li><%= link_to('Teachers List', teachers_path) %> </li>
+            <li><%= link_to('Shedules List', shedules_path) %></li>
 
 
-	<!-- content starts -->
-	<div id="content-outer"><div id="content-wrapper" class="container_16">
-           
-	 <%= yield %>
-	<!-- contents end here -->	
-       
-	</div>
-        
-        </div>
-      
-</body>
+
+            <!--<li><a href="index.html">Services</a></li>
+            <li><a href="index.html">Support</a></li>
+            <li><a href="index.html">About</a></li>		-->
+          </ul>		
+        </div>		
+
+        <div id="header-image"></div> 		
+
+
+        <!-- header ends here -->
+      </div>
+
+
+    </div>
+
+
+    <!-- content starts -->
+    <div id="content-outer"><div id="content-wrapper" class="container_16">
+
+        <%= yield %>
+        <!-- contents end here -->	
+
+      </div>
+
+    </div>
+
+  </body>
 </html>

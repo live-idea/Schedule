@@ -3,12 +3,14 @@
 <% @teachers.each do |teacher| %>
 <table>
   <tr> 
-    <td>
+    <td style="width: 500px">
       <%= image_tag teacher.photo.url(:thumb), :style=>"float:left;" if teacher.photo.exists? %>
       <%= teacher.full_name %>
-     
+      <br/>
+      <%= teacher.department %>
     </td>
-    <td><%= teacher.department %></td>
+    
+    <td></td>
     
 </tr>
 
