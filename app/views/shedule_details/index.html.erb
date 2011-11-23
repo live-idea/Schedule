@@ -2,9 +2,22 @@
 <%  @days = [["Понеділок", 1],["Вівторок", 2], ["Середа", 3], ["Четвер", 4], ["П'ятниця", 5], ["Субота", 6]]%>
 <%#<%  @days = [1, 2, 3, 4, 5, 6]%>
 <%  @lessons = [1,2,3,4,5,6] %>
+<div class="lessonsTbl">
+  <h1>Осінній семестр, 2011/2012 навч. рік</h1>
+  <div style="margin-top:5px">
+    <img id="full_day"/>
+    <img id="first_full"/>
+    <img id="second_full"/>
+    <img id="ch_full"/>
+    <img id="ch_first"/>
+    <img id="ch_second"/>
+    <img id="zn_full"/>
+    <img id="zn_first"/>
+    <img id="zn_second"/>
+  </div>
    <div id="menu">
         <ul>
-          <li>Teachers</li>
+          <li><h2>Lecturers</h2></li>
           <%Teacher.all.each do |teacher|%>
             <li>
               <%if params[:teacher_id] == teacher.id.to_s%>
@@ -16,13 +29,13 @@
           <%end%>
         </ul>
       </div>
-<table id="one-column-emphasis" summary="2007 Major IT Companies' Profit">
+<table id="one-column-emphasis">
   <colgroup>
     <col class="oce-first" />
   </colgroup>
   <thead>
     <tr>
-      <th scope="col">/</th>
+      <th class="firstCol" scope="col" >№</th>
       <% @days.each do |day| %>
         <th scope="col"><%=day[0]%></th>
       <%end%>
@@ -30,12 +43,11 @@
   </thead>
   <tbody>
     <% @lessons.each do |lesson| %>
-    <tr>
-      <td><%=lesson%></td>
+    <tr id ="tbl">
+      <td class="dayTbl"><%=lesson%></td>
       <% @days.each do |day| %>
-        <td >
-          <%= render :partial => "lesson_details", :locals => {:shedule=>@shedule, :shedule_details => @shedule_details, :day_week=>day[1], :lesson_no=>lesson, :teacher_id=>@teacher_id, :widget => false} %>
-             
+        <td class="lessonTbl">
+          <%= render :partial => "lesson_details", :locals => {:shedule=>@shedule, :shedule_details => @shedule_details, :day_week=>day[1], :lesson_no=>lesson, :teacher_id=>@teacher_id, :widget => false} %>  
         </td>
       <%end%>
     </tr>
@@ -44,3 +56,4 @@
   </tbody>
 
 </table>
+</div>

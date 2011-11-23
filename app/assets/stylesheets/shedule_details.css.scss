@@ -2,66 +2,119 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body
-{
-    line-height: 1.6em;
+.lessonsTbl{
+    background: #f6f5f5 !important;
+    width: 930px;
+    padding: 20px 35px 30px 35px;
+}
+.lessonsTbl h1{
+    font: normal 21px/16px Georgia !important;
 }
 
 #one-column-emphasis{
-    float: left;
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 12px;
-    margin: 0px 0px 0px 0px;
-    width: 80%;
-    border: 1px solid #fff;
+    margin: 20px 0px 0px 0px;
+    border: 1px solid #dddddd;
     text-align: left;
     border-collapse: collapse;
+    width: 828px;
 }
 #one-column-emphasis th
 {
-    font-size: 14px;
-    font-weight: normal;
-    padding: 12px 15px;
-    color: #039;
-    background: #d0dafd;
+    font-size: 13px;
+    font-weight: normal !important;
+    text-align: center;
+    height: 32px;
+    padding-top: 8px;
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    color: #666666;
+    background: url(tblThBgr.jpg) repeat-x left top;
 }
-#one-column-emphasis td
+#one-column-emphasis td.lessonTbl
 {
-    padding: 10px 15px;
     color: #669;
-    border: 1px solid #e8edff;
-    width: 200px;
+    width: 149px;
+    border-left: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+#one-column-emphasis th.firstCol{
+    width: 30px !important;
+}
+.dayTbl{
+    width: 30px !important;
+    padding: 10px 0px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
 }
 #one-column-emphasis td  div
 {
-    /*border-left-color: #039; 
-    border-left-width: 7px;  
-    padding-left: 5px;
-    border-style: outset;*/
 }
-#parts{
-    border: 1px solid ;
+/*#one-column-emphasis tr:nth-child(2n+1){
+     background: #ffffff; 
 }
+tr:nth-child(2n) {
+     background: #f6f5f5;
+}*/
 
-#one-column-emphasis td td, tr
-{
-    border: 1px solid red;
-}
-.oce-first
-{
-    background: #d0dafd;
-    border-right: 10px solid transparent;
-    border-left: 10px solid transparent;
+#parts{
+    
 }
 #one-column-emphasis tr:hover td
 {
     color: #339;
-    //background: #eff2ff;
+    background: #eff2ff;
     //border: 1px solid #e8edff;
 }
-#one-column-emphasis td:hover
+/*#one-column-emphasis td:hover
 {
     color: #339;
     background: #eff2ff;
-    border: 1px solid #e8edff;
+   
+}*/
+#full_day{
+    background: url(full_day.gif);
+    width:23px;
+    height:23px;
+}
+#first{
+    background: url(first.gif);
+    width:23px;
+    height:23px;
+}
+#second{
+    background: url(second.gif);
+    width:23px;
+    height:23px;
+}
+#ch_full{
+    background: url(ch_full.gif);
+    width:23px;
+    height:23px;
+}
+#zn_full{
+    background: url(zn_full.gif);
+    width:23px;
+    height:23px;
+}
+#ch_first{
+    background: url(ch_first.gif);
+    width:23px;
+    height:23px;
+}
+#ch_second{
+    background: url(ch_sec.gif);
+    width:23px;
+    height:23px;
+}
+#zn_second{
+    background: url(zn_sec.gif);
+    width:23px;
+    height:23px;
+}
+#zn_first{
+    background: url(zn_first.gif);
+    width:23px;
+    height:23px;
 }

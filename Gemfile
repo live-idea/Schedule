@@ -18,7 +18,7 @@ group :assets do
 end
 gem "paperclip"
 gem 'jquery-rails'
-gem 'thin'
+#gem "thin"
 gem "libv8", :platforms => [:ruby] 
 gem "therubyracer", "0.9.8", :platforms => [:ruby]
 # Use unicorn as the web server

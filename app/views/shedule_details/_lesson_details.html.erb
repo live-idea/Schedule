@@ -9,9 +9,11 @@
             <%=day_shedule.place%><br/>
             <%=day_shedule.course%>
           </div>
+          <div>
+            <img id="full_day" alt="full day"/>
+          </div>
           <%if !widget%>
             <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
-            
           <%end%>
         </td>
       <%else%> 
@@ -19,7 +21,11 @@
           <%if day_shedule.subgroup_no ==1%>
             <div><%=day_shedule.lesson_title%> <br/>
               <%=day_shedule.place%><br/>
-              <%=day_shedule.course%></div>
+              <%=day_shedule.course%>
+            </div>
+          <div>
+            <img id="first" alt="full day first subgr"/>
+          </div>
             <%if !widget%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
             <%end%>
@@ -29,7 +35,11 @@
           <%if day_shedule.subgroup_no ==2%>
             <div><%=day_shedule.lesson_title%> <br/>
               <%=day_shedule.place%><br/>
-              <%=day_shedule.course%></div>
+              <%=day_shedule.course%>
+            </div>
+          <div>
+            <img id="second" alt="full day second subgr"/>
+          </div>
             <%if !widget%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
             <%end%>
@@ -48,16 +58,29 @@
       <% if ch_shedule != nil %>
         <%if ch_shedule.subgroup_no ==0%>
           <td colspan="2">
-            <div ><%=ch_shedule.lesson_title%></div>
+            <div>
+              <%=ch_shedule.lesson_title%><br/>
+               <%=ch_shedule.place%><br/>
+               <%=ch_shedule.course%></div>
+            </div>
+            <div>
+              <img id="ch_full" alt="ch full"/>
+            </div>
             <%if !widget%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
             <%end%>
-            <hr></hr>
-          </td>
+         </td>
         <%else%>
           <td>
             <%if ch_shedule.subgroup_no == 1%>
-              <div><%=ch_shedule.lesson_title%></div>
+              <div>
+                <%=ch_shedule.lesson_title%><br/>
+                <%=ch_shedule.place%><br/>
+                <%=ch_shedule.course%>
+              </div>
+              <div>
+                <img id="ch_first" alt="ch first"/>
+             </div>
               <%if !widget%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
               <%end%>
@@ -65,7 +88,14 @@
           </td> 
           <td>
             <%if ch_shedule.subgroup_no == 2%>
-              <div><%=ch_shedule.lesson_title%></div>
+              <div>
+                 <%=ch_shedule.lesson_title%><br/>
+                 <%=ch_shedule.place%><br/>
+                 <%=ch_shedule.course%>
+              </div>
+             <div>
+                <img id="ch_second" alt="ch second"/>
+             </div>
               <%if !widget%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
               <%end%>
@@ -84,7 +114,14 @@
       <% if zn_shedule != nil %>
         <%if zn_shedule.subgroup_no ==0%>
           <td>
-            <div><%=zn_shedule.lesson_title%></div>
+            <div>
+              <%=zn_shedule.lesson_title%><br/>
+               <%=zn_shedule.place%><br/>
+               <%=zn_shedule.course%></div>
+            </div>
+             <div>
+                <img id="zn_full" alt="zn full"/>
+              </div>
             <%if !widget%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
             <%end%>
@@ -92,7 +129,14 @@
         <%else%>
           <td>
             <%if zn_shedule.subgroup_no == 1%>
-              <div><%=zn_shedule.lesson_title%></div>
+              <div>
+                <%=zn_shedule.lesson_title%><br/>
+                <%=zn_shedule.place%><br/>
+                <%=zn_shedule.course%></div>
+            </div>
+              <div>
+                <img id="zn_first" alt="zn first"/>
+              </div>
               <%if !widget%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
               <%end%>
@@ -100,7 +144,14 @@
           </td> 
           <td>
             <%if zn_shedule.subgroup_no == 2%>
-              <div><%=zn_shedule.lesson_title%></div>
+              <div>
+                <%=zn_shedule.lesson_title%><br/>
+                <%=zn_shedule.place%><br/>
+                <%=zn_shedule.course%></div>
+              </div>
+              <div>
+                <img id="zn_second" alt="zn second"/>
+              </div>
               <%if !widget%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
               <%end%>
