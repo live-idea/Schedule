@@ -5,7 +5,8 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+#gem 'mysql2'
+gem pg
 
 gem "simple_form"
 gem "devise"
@@ -23,7 +24,7 @@ gem "libv8", :platforms => [:ruby]
 gem "therubyracer", "0.9.8", :platforms => [:ruby]
 # Use unicorn as the web server
 # gem 'unicorn'
-
+#gem install heroku
 # Deploy with Capistrano
 # gem 'capistrano'
 
