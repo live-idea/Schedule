@@ -18,7 +18,7 @@ group :assets do
   gem 'uglifier'
 end
 gem "paperclip"
-gem 'jquery-rails'
+
 #gem "thin"
 gem "libv8", :platforms => [:ruby] 
 gem "therubyracer", "0.9.8", :platforms => [:ruby]
@@ -35,3 +35,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+gem 'jquery-rails'
