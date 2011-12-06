@@ -5,30 +5,33 @@
  <%  @subgroup = [ ["вся", 0], ["перша", 1], ["друга", 2]] %>
  <%  @lessonType = ["лекція", "практична", "лабораторна"] %>
 
+<!--<div class="field">
+    <#%= f.label :day_week %>
+    <#%= f.select :day_week, @days %><br/>
+  </div>-->
 <div class="field">
-    <%= f.label :day_week %>
-    <%= f.select :day_week, @days %><br/>
-  </div>
-<br/>
-  
-<div class="field">
-    <%= f.label :lesson_no %>
-    <%= f.select :lesson_no, @lessons %><br/>
+    <%= f.hidden_field :day_week %>
 </div>
-<br/>
+  
+<!--<div class="field">
+    <#%= f.label :lesson_no %>
+    <#%= f.select :lesson_no, @lessons %><br/>
+</div>-->
+<div class="field">
+    <%= f.hidden_field :lesson_no %>
+</div>
 <div class="field">
     <%= f.label :week_type %>
     <%= f.select :week_type, @weekType %><br/>
 </div>
 <br/>
-<div class="field">
-    <%= f.label :teacher_id %>
-    <%= f.select :teacher_id, Teacher.all.map {|t| [t.full_name, t.id]}, :prompt=>"--Виберіть викладача--" %>
-</div>
+<!--<div class="field">
+   <#%= f.label :teacher_id %>
+    <#%= f.select :teacher_id, Teacher.all.map {|t| [t.full_name, t.id]}, :prompt=>"--Виберіть викладача--" %>
+</div>-->
 <div class="field">
     <%= f.hidden_field :teacher_id %>
 </div>
-<br/>
  <%= f.input :lesson_title%>
   <%= f.input :place %>
   <%= f.input :course %>
