@@ -5,6 +5,7 @@
 .lessonsTbl{
     background: #f6f5f5 !important;
     width: 930px;
+    position: relative;
     padding: 20px 35px 30px 35px;
 }
 .lessonsTbl h1{
@@ -13,7 +14,7 @@
 
 #one-column-emphasis{
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-    font-size: 12px;
+    font-size: 11px;
     margin: 20px 0px 0px 0px;
     border: 1px solid #dddddd;
     text-align: left;
@@ -26,7 +27,7 @@
     font-weight: normal !important;
     text-align: center;
     height: 32px;
-    padding-top: 8px;
+    line-height: 32px;
     border-bottom: 1px solid #dddddd;
     border-left: 1px solid #dddddd;
     color: #666666;
@@ -73,48 +74,59 @@ tr:nth-child(2n) {
     background: #eff2ff;
    
 }*/
+.daysBox{
+    position: absolute;
+    right: 38px;
+    top: 20px;
+}
+.daysBox div{
+    float: left;
+}
 #full_day{
     background: url(full_day.gif);
     width:23px;
     height:23px;
 }
-#first{
+div#first_full{
     background: url(first.gif);
     width:23px;
     height:23px;
 }
-#second{
+div#second_full{
     background: url(second.gif);
     width:23px;
     height:23px;
 }
-#ch_full{
+div#ch_full{
     background: url(ch_full.gif);
     width:23px;
     height:23px;
 }
-#zn_full{
+div#zn_full{
     background: url(zn_full.gif);
     width:23px;
     height:23px;
 }
-#ch_first{
+div#ch_first{
     background: url(ch_first.gif);
     width:23px;
     height:23px;
 }
-#ch_second{
+div#ch_second{
     background: url(ch_sec.gif);
     width:23px;
     height:23px;
 }
-#zn_second{
+div#zn_second{
     background: url(zn_sec.gif);
     width:23px;
     height:23px;
 }
-#zn_first{
+div#zn_first{
     background: url(zn_first.gif);
     width:23px;
     height:23px;
 }
+.not_norm {
+    text-color:red;
+    }

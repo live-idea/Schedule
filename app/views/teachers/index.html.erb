@@ -1,7 +1,7 @@
 <h1>Teachers list</h1>
 
 <% @teachers.each do |teacher| %>
-<table>
+<table class="lessonsTbl">
   <tr> 
     <td style="width: 500px">
       <%= image_tag teacher.photo.url(:thumb), :style=>"float:left;" if teacher.photo.exists? %>

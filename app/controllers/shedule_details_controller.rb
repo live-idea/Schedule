@@ -82,6 +82,6 @@ class SheduleDetailsController < ApplicationController
     @shedule = Shedule.find(params[:shedule_id])
     @shedule_detail = SheduleDetail.find(params[:id])
     @shedule_detail.destroy
-    redirect_to shedule_shedule_details_path, notice: 'Shedule details was successfully deleted.' 
+    redirect_to shedule_shedule_details_path(@shedule, :teacher_id=>@shedule_detail.teacher_id), notice: 'Shedule details was successfully deleted.' 
   end
 end

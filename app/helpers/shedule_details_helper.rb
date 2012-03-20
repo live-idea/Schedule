@@ -6,6 +6,8 @@ module SheduleDetailsHelper
         d.day_week == day_week && d.lesson_no == lesson_no
       end 
       details.each do |detail|
+        #if detail.lesson_type =="Лекція"
+        #  type_norm=detail
         if detail.week_type == "0"
           day_shedule=detail
         elsif detail.week_type == "1"
@@ -15,7 +17,7 @@ module SheduleDetailsHelper
         end
       end
     end
-    return day_shedule, ch_shedule, zn_shedule
+    return day_shedule, ch_shedule, zn_shedule#, type_norm
   end
   
 end

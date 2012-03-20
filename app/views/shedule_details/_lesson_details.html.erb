@@ -1,21 +1,56 @@
 <% day_shedule, ch_shedule, zn_shedule = show_lesson_details(shedule_details, day_week, lesson_no)%> 
+
 <% if day_shedule !=nil %>
   <table id="full">
     <tr>
       <%if day_shedule.subgroup_no ==0%>
-        <td colspan="2">
+      <%if day_shedule.lesson_type =="0"%>
+        <td colspan="2" style="color: #594274;">
           <div>
             <%=day_shedule.lesson_title%> <br/>
             <%=day_shedule.place%><br/>
-            <%=day_shedule.course%>
-          </div>
+            <%=day_shedule.course%><br/></b>
+                    </div>
           <div>
-            <img id="full_day" alt="full day"/>
+            <div id="full_day"></div>
           </div>
           <%if !widget%>
             <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
+            <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
           <%end%>
         </td>
+       <%elsif day_shedule.lesson_type =="1"%>
+        <td colspan="2" style="color: #bc0d5b;">
+          <div>
+            <%=day_shedule.lesson_title%> <br/>
+            <%=day_shedule.place%><br/>
+            <%=day_shedule.course%><br/></b>
+          </div>
+          <div>
+            <div id="full_day"></div>
+          </div>
+          <%if !widget%>
+            <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
+            <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
+          <%end%>
+        </td>
+        <%else%>
+        <td colspan="2" style="color: #d37507;">
+          <div>
+            <%=day_shedule.lesson_title%> <br/>
+            <%=day_shedule.place%><br/>
+            <%=day_shedule.course%><br/></b>
+          </div>
+          <div>
+            <div id="full_day"></div>
+          </div>
+          <%if !widget%>
+            <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
+            <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
+          <%end%>
+        </td>
+       
+       <%end%>
       <%else%> 
         <td>
           <%if day_shedule.subgroup_no ==1%>
@@ -24,10 +59,11 @@
               <%=day_shedule.course%>
             </div>
           <div>
-            <img id="first" alt="full day first subgr"/>
+            <div id="first"></div>
           </div>
             <%if !widget%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
+              <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
             <%end%>
           <%end%>
         </td>
@@ -38,10 +74,11 @@
               <%=day_shedule.course%>
             </div>
           <div>
-            <img id="second" alt="full day second subgr"/>
+            <div id="second"></div>
           </div>
             <%if !widget%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
+              <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
             <%end%>
           <%end%>
         </td>
@@ -64,10 +101,11 @@
                <%=ch_shedule.course%></div>
             </div>
             <div>
-              <img id="ch_full" alt="ch full"/>
+              <div id="ch_full"></div>
             </div>
             <%if !widget%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
+              <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, ch_shedule), confirm: 'Are you sure?', method: :delete %>
             <%end%>
          </td>
         <%else%>
@@ -79,10 +117,11 @@
                 <%=ch_shedule.course%>
               </div>
               <div>
-                <img id="ch_first" alt="ch first"/>
+                <div id="ch_first"></div>
              </div>
               <%if !widget%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
+                <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, ch_shedule), confirm: 'Are you sure?', method: :delete %>
               <%end%>
             <%end%>
           </td> 
@@ -94,10 +133,11 @@
                  <%=ch_shedule.course%>
               </div>
              <div>
-                <img id="ch_second" alt="ch second"/>
+                <div id="ch_second"></div>
              </div>
               <%if !widget%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
+                <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, ch_shedule), confirm: 'Are you sure?', method: :delete %>
               <%end%>
             <%end%>
           </td>
@@ -120,10 +160,11 @@
                <%=zn_shedule.course%></div>
             </div>
              <div>
-                <img id="zn_full" alt="zn full"/>
+                <div id="zn_full"></div>
               </div>
             <%if !widget%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
+              <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, zn_shedule), confirm: 'Are you sure?', method: :delete %>
             <%end%>
           </td>
         <%else%>
@@ -135,10 +176,11 @@
                 <%=zn_shedule.course%></div>
             </div>
               <div>
-                <img id="zn_first" alt="zn first"/>
+                <div id="zn_first"></div>
               </div>
               <%if !widget%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
+                <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, zn_shedule), confirm: 'Are you sure?', method: :delete %>
               <%end%>
             <%end%>
           </td> 
@@ -150,10 +192,11 @@
                 <%=zn_shedule.course%></div>
               </div>
               <div>
-                <img id="zn_second" alt="zn second"/>
+                <div id="zn_second"></div>
               </div>
               <%if !widget%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
+                <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, zn_shedule), confirm: 'Are you sure?', method: :delete %>
               <%end%>
             <%end%>
           </td>
