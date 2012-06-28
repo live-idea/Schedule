@@ -14,7 +14,7 @@
           <div>
             <div id="full_day"></div>
           </div>
-          <%if !widget%>
+          <%if !widget && user_signed_in? %>
             <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
             <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
           <%end%>
@@ -29,7 +29,7 @@
           <div>
             <div id="full_day"></div>
           </div>
-          <%if !widget%>
+          <%if !widget && user_signed_in?%>
             <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
             <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
           <%end%>
@@ -44,7 +44,7 @@
           <div>
             <div id="full_day"></div>
           </div>
-          <%if !widget%>
+          <%if !widget && user_signed_in?%>
             <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
             <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
           <%end%>
@@ -61,7 +61,7 @@
           <div>
             <div id="first"></div>
           </div>
-            <%if !widget%>
+            <%if !widget && user_signed_in?%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
               <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
             <%end%>
@@ -76,7 +76,7 @@
           <div>
             <div id="second"></div>
           </div>
-            <%if !widget%>
+            <%if !widget && user_signed_in?%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, day_shedule)%>
               <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, day_shedule), confirm: 'Are you sure?', method: :delete %>
             <%end%>
@@ -103,7 +103,7 @@
             <div>
               <div id="ch_full"></div>
             </div>
-            <%if !widget%>
+            <%if !widget && user_signed_in?%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
               <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, ch_shedule), confirm: 'Are you sure?', method: :delete %>
             <%end%>
@@ -119,7 +119,7 @@
               <div>
                 <div id="ch_first"></div>
              </div>
-              <%if !widget%>
+              <%if !widget && user_signed_in?%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
                 <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, ch_shedule), confirm: 'Are you sure?', method: :delete %>
               <%end%>
@@ -135,7 +135,7 @@
              <div>
                 <div id="ch_second"></div>
              </div>
-              <%if !widget%>
+              <%if !widget && user_signed_in?%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, ch_shedule)%>
                 <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, ch_shedule), confirm: 'Are you sure?', method: :delete %>
               <%end%>
@@ -162,7 +162,7 @@
              <div>
                 <div id="zn_full"></div>
               </div>
-            <%if !widget%>
+            <%if !widget && user_signed_in?%>
               <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
               <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, zn_shedule), confirm: 'Are you sure?', method: :delete %>
             <%end%>
@@ -178,7 +178,7 @@
               <div>
                 <div id="zn_first"></div>
               </div>
-              <%if !widget%>
+              <%if !widget && user_signed_in?%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
                 <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, zn_shedule), confirm: 'Are you sure?', method: :delete %>
               <%end%>
@@ -194,7 +194,7 @@
               <div>
                 <div id="zn_second"></div>
               </div>
-              <%if !widget%>
+              <%if !widget && user_signed_in?%>
                 <%=link_to "Edit", edit_shedule_shedule_detail_path(shedule, zn_shedule)%>
                 <%= link_to 'Destroy', shedule_shedule_detail_path(shedule, zn_shedule), confirm: 'Are you sure?', method: :delete %>
               <%end%>
